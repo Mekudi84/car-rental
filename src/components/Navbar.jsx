@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, CarFront, Phone } from 'lucide-react';
+import { Menu, X, CarFront, Phone, Moon, Sun } from 'lucide-react';
 import { businessInfo } from '../config/business';
 import Button from './Button';
 
@@ -10,7 +10,7 @@ const navItems = [
   { label: 'Contact', to: '/contact' },
 ];
 
-function Navbar() {
+function Navbar({ theme, onToggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -48,6 +48,15 @@ function Navbar() {
             <Phone size={16} />
             {businessInfo.phone}
           </a>
+          <button
+            type="button"
+            className="theme-toggle"
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            onClick={onToggleTheme}
+          >
+            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+          </button>
           <Button to="/cars" className="nav-cta">Book Now</Button>
           <button
             type="button"

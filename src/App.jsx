@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Cars from './pages/Cars';
@@ -8,9 +9,16 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
     <div className="app-shell">
-      <Navbar />
+      <Navbar theme={theme} onToggleTheme={() => setTheme((current) => current === 'light' ? 'dark' : 'light')} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
