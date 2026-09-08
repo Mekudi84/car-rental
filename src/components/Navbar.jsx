@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-shell">
-        <Link to="/" className="brand" aria-label="Velora Motors Home">
+        <Link to="/" className="brand" aria-label={`${businessInfo.name} Home`}>
           <div className="brand-mark"><CarFront size={18} /></div>
           <div>
             <span className="brand-name">{businessInfo.name}</span>

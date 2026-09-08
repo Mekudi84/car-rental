@@ -28,7 +28,7 @@ function Contact() {
             <SectionTitle
               eyebrow="Our story"
               title="Built for convenient, premium mobility"
-              description="Velora Motors helps professionals, tourists, and families enjoy a smoother way to move around with reliable, stylish vehicles and a customer-first rental process."
+              description={`${businessInfo.name} helps professionals, tourists, and families enjoy a smoother way to move around with reliable, stylish vehicles and a customer-first rental process.`}
             />
 
             <div className="mini-grid">
