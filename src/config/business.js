@@ -3,7 +3,7 @@ export const businessInfo = {
   tagline: 'Luxury and reliable car rental tailored for every journey.',
   phone: '+2348012345678',
   whatsapp: '2349017266900',
-  email: 'booking@basseymotors.com',
+  email: 'unyimebassey84@gmail.com',
   address: '12 Lekki Expressway, Lagos, Nigeria',
   businessHours: 'Mon - Sun: 8:00 AM - 8:00 PM',
   description: 'Premium car rental services delivering comfort, confidence, and convenience across Lagos and beyond.',
