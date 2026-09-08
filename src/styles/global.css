@@ -653,6 +653,12 @@ button {
   gap: 12px;
 }
 
+.cta-box .btn-secondary {
+  background: #fff;
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
 .page-shell {
   background: #f7f7f7;
 }
