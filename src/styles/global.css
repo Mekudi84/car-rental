@@ -245,6 +245,12 @@ button {
   margin: 0;
 }
 
+.hero-section .btn-secondary {
+  background: #fff;
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
 .eyebrow {
   display: inline-block;
   background: rgba(245, 158, 11, 0.12);
